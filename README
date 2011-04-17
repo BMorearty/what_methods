@@ -1,3 +1,31 @@
 README for what_methods
 =======================
 
+This is from Dr. Nic.  See http://drnicwilliams.com/2006/10/12/my-irbrc-for-consoleirb/
+
+Ever asked: “if I have an object, what method can I call on it to get that result?”
+
+See if this suits your console cravings:
+
+    > 3.45.what? 3
+    3.45.truncate == 3
+    3.45.to_i == 3
+    3.45.prec_i == 3
+    3.45.floor == 3
+    3.45.to_int == 3
+    3.45.round == 3
+    => ["truncate", "to_i", "prec_i", "floor", "to_int", "round"]
+    > 3.45.what? 4
+    3.45.ceil == 4
+    => ["ceil"]
+    > 3.55.what? 4
+    3.55.ceil == 4
+    3.55.round == 4
+    => ["ceil", "round"]
+    3.what?(4,1)
+    => ["+"]
+
+Just what you need in the console.
+
+Notice the last example: you can pass parameters after the desired result.  What? will tell
+you what method will return the desired result if you pass those parameters to it.
